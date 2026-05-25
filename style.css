@@ -1,0 +1,193 @@
+/* ========================================
+   SIMPLE AGE CALCULATOR STYLES
+   ======================================== */
+
+/* Reset - Basic cleanup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Main container */
+.container {
+    background: white;
+    border-radius: 15px;
+    padding: 35px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 28px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+/* Form groups */
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Input fields */
+select, input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.2s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+/* Row layout for day/month/year */
+.row {
+    display: flex;
+    gap: 15px;
+}
+
+.row .input-group {
+    flex: 1;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Result box */
+.result {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    text-align: center;
+    display: none;
+}
+
+.result.show {
+    display: block;
+}
+
+/* Age display text */
+.age-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: #667eea;
+    margin: 10px 0;
+}
+
+/* Three cards layout */
+.age-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.detail-card {
+    flex: 1;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+}
+
+.detail-value {
+    font-size: 28px;
+    font-weight: bold;
+    color: #764ba2;
+}
+
+.detail-label {
+    font-size: 12px;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* Error message */
+.error {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 15px;
+    text-align: center;
+    padding: 10px;
+    background: #ffe5e5;
+    border-radius: 8px;
+    display: none;
+}
+
+.error.show {
+    display: block;
+}
+
+/* Responsive - Mobile devices */
+@media (max-width: 500px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .age-details {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+}
